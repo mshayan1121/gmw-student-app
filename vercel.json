@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/landing-page/(.*)",
+      "destination": "/landing-page/index.html"
+    },
+    {
+      "source": "/((?!landing-page).*)",
+      "destination": "/index.html"
+    }
   ]
 }
