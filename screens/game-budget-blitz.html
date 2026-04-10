@@ -1,0 +1,48 @@
+<div class="game-screen" id="screen-game">
+  <div class="gback" onclick="exitGame()" id="gbackBtn"></div>
+  <div class="ghud">
+    <div class="ghud-score">
+      <div class="ghud-score-label">Score</div>
+      <div class="ghud-score-val" id="gScore">0</div>
+    </div>
+    <div class="ghud-center">
+      <div class="gtimer-ring" id="gTimerRing">
+        <span class="gtimer-num" id="gTimerNum">15</span>
+      </div>
+    </div>
+    <div class="ghud-right">
+      <div class="ghud-round">Round <span id="gRoundNum">1</span> of 5</div>
+      <div class="ghud-streak" id="gStreakBadge" style="display:none"></div>
+    </div>
+  </div>
+  <div class="gprogress"><div class="gprogress-fill" id="gProgress" style="width:0%"></div></div>
+  <div class="gscenario" id="gScenarioArea">
+    <div class="gscenario-card" id="gScenarioCard">
+      <div class="gscenario-tag" id="gTag"></div>
+      <div class="gscenario-q" id="gQ"></div>
+      <div class="gbudget-row">
+        <div><div class="gbudget-label">Budget</div><div class="gbudget-val" id="gBudget"></div></div>
+        <div style="text-align:right"><div class="gbudget-label">Remaining</div><div class="gbudget-val" id="gRemaining"></div></div>
+      </div>
+      <div class="gbudget-bar"><div class="gbudget-fill" id="gBudgetBar" style="width:100%"></div></div>
+    </div>
+    <div class="gchoices" id="gChoices"></div>
+    <div class="gfeedback" id="gFeedback">Choose the smartest option for your budget!</div>
+    <button class="gnext" id="gNext" onclick="nextRound()">Next round →</button>
+  </div>
+  <div class="gresult" id="gResult">
+    <div class="gresult-trophy" id="gTrophy"></div>
+    <div class="gresult-title" id="gResultTitle"></div>
+    <div class="gresult-score" id="gResultScore"></div>
+    <div class="gresult-sub" id="gResultSub"></div>
+    <div class="gresult-stats">
+      <div class="grs"><div class="grs-num" id="grCorrect">0</div><div class="grs-lbl">Correct</div></div>
+      <div class="grs"><div class="grs-num" id="grStreak">0</div><div class="grs-lbl">Best streak</div></div>
+      <div class="grs"><div class="grs-num" id="grTime">0s</div><div class="grs-lbl">Avg speed</div></div>
+    </div>
+    <div class="gresult-btns">
+      <button class="grbtn primary" onclick="restartGame()">Play again</button>
+      <button class="grbtn secondary" onclick="exitGame()">Back to games</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="screen" id="screen-leaderboard">
+  <div class="fade">
+    <div class="lb-me-card">
+      <div>
+        <div class="lb-me-rank-label">Your rank</div>
+        <div class="lb-me-rank-big">#4</div>
+      </div>
+      <div class="lb-me-divider"></div>
+      <div style="flex:1">
+        <div class="lb-me-name">Sara Al Mansouri</div>
+        <div class="lb-me-school">GEMS Wellington · Grade 8 · Dubai</div>
+      </div>
+      <div class="lb-me-pts">
+        <div class="lb-me-pts-num">1,240</div>
+        <div class="lb-me-pts-label">points this week</div>
+      </div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="lb-tabs">
+      <div class="lb-tab active" id="tab-school" onclick="switchTab('school')">My school</div>
+      <div class="lb-tab" id="tab-emirate" onclick="switchTab('emirate')">Dubai</div>
+      <div class="lb-tab" id="tab-national" onclick="switchTab('national')">National</div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="slabel">Top 3 this week</div>
+    <div class="lb-top3">
+      <div class="lb-top-card">
+        <div class="lb-trophy s"><span id="lt2ico"></span></div>
+        <div class="lb-top-rank s">2nd place</div>
+        <div class="lb-top-av" id="lt2av"></div>
+        <div class="lb-top-name">Layla M.</div>
+        <div class="lb-top-school">GEMS Wellington</div>
+        <div class="lb-top-pts">1,870</div>
+      </div>
+      <div class="lb-top-card first">
+        <div class="lb-trophy g"><span id="lt1ico"></span></div>
+        <div class="lb-top-rank g">1st place</div>
+        <div class="lb-top-av" id="lt1av"></div>
+        <div class="lb-top-name">Ahmed K.</div>
+        <div class="lb-top-school">GEMS Wellington</div>
+        <div class="lb-top-pts">2,100</div>
+      </div>
+      <div class="lb-top-card">
+        <div class="lb-trophy b"><span id="lt3ico"></span></div>
+        <div class="lb-top-rank b">3rd place</div>
+        <div class="lb-top-av" id="lt3av"></div>
+        <div class="lb-top-name">Omar R.</div>
+        <div class="lb-top-school">Repton School</div>
+        <div class="lb-top-pts">1,560</div>
+      </div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="slabel">Full rankings</div>
+    <div class="lb-table">
+      <div class="lb-table-header">
+        <div style="text-align:center">Rank</div>
+        <div>Player</div>
+        <div>Points</div>
+        <div style="text-align:center">Games</div>
+        <div style="text-align:right">Change</div>
+      </div>
+      <div class="lb-table-row">
+        <div class="lb-tr-rank gold">1</div>
+        <div class="lb-tr-player"><div class="lb-tr-av" id="lta1"></div><div><div class="lb-tr-name">Ahmed K.</div><div class="lb-tr-school">GEMS Wellington</div></div></div>
+        <div class="lb-tr-pts">2,100</div>
+        <div class="lb-tr-games">18</div>
+        <div class="lb-tr-change up" id="lc1"></div>
+      </div>
+      <div class="lb-table-row">
+        <div class="lb-tr-rank silver">2</div>
+        <div class="lb-tr-player"><div class="lb-tr-av" id="lta2"></div><div><div class="lb-tr-name">Layla M.</div><div class="lb-tr-school">GEMS Wellington</div></div></div>
+        <div class="lb-tr-pts">1,870</div>
+        <div class="lb-tr-games">15</div>
+        <div class="lb-tr-change up" id="lc2"></div>
+      </div>
+      <div class="lb-table-row me">
+        <div class="lb-tr-rank" style="color:#4B44CC;font-weight:900">4</div>
+        <div class="lb-tr-player"><div class="lb-tr-av" id="lta3"></div><div><div class="lb-tr-name me">Sara (you)</div><div class="lb-tr-school">GEMS Wellington</div></div></div>
+        <div class="lb-tr-pts" style="color:#4B44CC">1,240</div>
+        <div class="lb-tr-games">12</div>
+        <div class="lb-tr-change up" id="lc3"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="screen" id="screen-games">
+  <div class="fade">
+    <div class="feat">
+      <div>
+        <div class="ftag"><span class="fhot">🔥 HOT</span><span class="fnow">Available now</span></div>
+        <div class="ftitle">Budget Blitz</div>
+        <div class="fdesc">Make fast spending decisions before the timer runs out. The smarter you spend, the more points you earn.</div>
+        <div class="fmeta">
+          <div class="fmi" id="gfm1"></div>
+          <div class="fmi" id="gfm2"></div>
+          <div class="fmi" id="gfm3"></div>
+        </div>
+        <button class="fpbtn" onclick="launchGame()"><span id="gfpbi"></span>Play now</button>
+      </div>
+      <div class="ficon" id="gfiw"></div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="slabel">Your game stats</div>
+    <div class="row4">
+      <div class="gstat"><div class="gsnum">12</div><div class="gslbl">Games played</div></div>
+      <div class="gstat"><div class="gsnum gold">1,240</div><div class="gslbl">Points earned</div></div>
+      <div class="gstat"><div class="gsnum teal">5</div><div class="gslbl">Best streak</div></div>
+      <div class="gstat"><div class="gsnum">#847</div><div class="gslbl">National rank</div></div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="slabel">All games</div>
+    <div class="row3">
+      <div class="gtile av pur" onclick="launchGame()">
+        <div class="gtop">
+          <div class="gtico pur" id="gti1"></div>
+          <span class="gpill hot">HOT</span>
+        </div>
+        <div class="gtname">Budget Blitz</div>
+        <div class="gtdesc">Race the clock making smart spending decisions.</div>
+        <div class="gtfoot">
+          <div><div class="gtpts">+80 pts</div><div class="gtrnd">5 rounds · 15s timer</div></div>
+          <button class="gtbtn" onclick="event.stopPropagation();launchGame()">Play →</button>
+        </div>
+      </div>
+      <div class="gtile lk tel">
+        <div class="gtop">
+          <div class="gtico tel" id="gti2"></div>
+          <span class="gpill soon" id="gsp2"></span>
+        </div>
+        <div class="gtname">Savings Quest</div>
+        <div class="gtdesc">Manage your money across a simulated month.</div>
+        <div class="gtfoot">
+          <div><div class="gtpts tel">+60 pts</div><div class="gtrnd">6 decisions · full month</div></div>
+          <div class="gtlck" id="glm2"></div>
+        </div>
+      </div>
+      <div class="gtile lk amb">
+        <div class="gtop">
+          <div class="gtico amb" id="gti3"></div>
+          <span class="gpill soon" id="gsp3"></span>
+        </div>
+        <div class="gtname">Smart Spender</div>
+        <div class="gtdesc">AI-powered questions matched to your interests.</div>
+        <div class="gtfoot">
+          <div><div class="gtpts amb">+50 pts</div><div class="gtrnd">10 questions · AI feedback</div></div>
+          <div class="gtlck" id="glm3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fade">
+    <div class="slabel">Top players this week</div>
+    <div class="lbprev">
+      <div class="lbph">
+        <div class="lbph-t">Budget Blitz leaderboard</div>
+        <div class="lbph-a" onclick="goTo('leaderboard')">See full →</div>
+      </div>
+      <div class="lbprow">
+        <div class="lbprank gold">1</div>
+        <div class="lbpav" id="gla1"></div>
+        <div class="lbpinfo"><div class="lbpname">Ahmed K.</div><div class="lbpsch">GEMS Wellington</div></div>
+        <div class="lbpscore"><div class="lbpnum">2,100</div><div class="lbpg">18 games</div></div>
+      </div>
+      <div class="lbprow me">
+        <div class="lbprank">4</div>
+        <div class="lbpav" id="gla2"></div>
+        <div class="lbpinfo"><div class="lbpname me">Sara (you)</div><div class="lbpsch">GEMS Wellington</div></div>
+        <div class="lbpscore"><div class="lbpnum" style="color:#4B44CC">1,240</div><div class="lbpg">12 games</div></div>
+      </div>
+    </div>
+  </div>
+</div>
