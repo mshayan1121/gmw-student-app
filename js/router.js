@@ -7,8 +7,21 @@ const titles = {
   game:        ['Budget Blitz', 'Round 1 of 5']
 };
 
+// ── Sidebar (mobile) ──────────────────────────────────────────────────────────
+function toggleSb() {
+  const sb = document.getElementById('sidebar');
+  const ov = document.getElementById('sbOverlay');
+  const isOpen = sb.classList.toggle('open');
+  ov.classList.toggle('active', isOpen);
+}
+function closeSb() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sbOverlay').classList.remove('active');
+}
+
 // ── Navigation ────────────────────────────────────────────────────────────────
 function goTo(id) {
+  closeSb();
   if (timerInt) { clearInterval(timerInt); timerInt = null; }
   document.querySelectorAll('.screen, .game-screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.ni').forEach(n => n.classList.remove('active'));

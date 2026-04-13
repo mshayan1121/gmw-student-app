@@ -464,3 +464,82 @@ html,body{height:100%;overflow:hidden}
 .grbtn.primary:hover{background:#E5A500}
 .grbtn.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.2)}
 .grbtn.secondary:hover{background:rgba(255,255,255,.2)}
+
+/* ── HAMBURGER BUTTON & SIDEBAR OVERLAY ─────────────────────────────────── */
+.ham-btn{display:none;align-items:center;justify-content:center;width:34px;height:34px;border:none;background:transparent;cursor:pointer;border-radius:8px;flex-shrink:0;padding:0;margin-right:2px}
+.ham-btn:hover{background:#F4F3FF}
+.sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:299}
+.sb-overlay.active{display:block}
+
+/* ── TABLET (768–1099px): sidebar stays, grids tighten ──────────────────── */
+@media(max-width:1099px){
+  .row3{grid-template-columns:1fr 1fr}
+  .row4{grid-template-columns:1fr 1fr}
+  .feat{grid-template-columns:1fr}
+  .ficon{display:none}
+  .fdesc{max-width:none}
+  .rw-badges-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cert-meta-row{grid-template-columns:1fr 1fr}
+}
+
+/* ── MOBILE (<768px): off-canvas sidebar ────────────────────────────────── */
+@media(max-width:767px){
+  .ham-btn{display:flex}
+  .app{border:none}
+  /* Sidebar slides in from left */
+  .sb{position:fixed;left:-220px;top:0;z-index:300;height:100%;transition:left .22s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 20px rgba(0,0,0,.3)}
+  .sb.open{left:0}
+  /* Top bar tweaks */
+  .tag-live,.tag-day,.tb-div,.pname,.ib{display:none}
+  .tb{padding:0 12px}
+  /* Screens */
+  .screen{padding:12px 12px 16px}
+  /* Grids */
+  .row2{grid-template-columns:1fr}
+  .row3{grid-template-columns:1fr 1fr}
+  .row4{grid-template-columns:1fr 1fr}
+  /* Featured game banner */
+  .feat{grid-template-columns:1fr}
+  .ficon{display:none}
+  .fdesc{max-width:none}
+  /* Leaderboard: my-rank card */
+  .lb-me-card{flex-wrap:wrap;gap:10px}
+  .lb-me-divider{display:none}
+  .lb-me-pts{margin-left:0}
+  /* Leaderboard table: hide Games + Change columns */
+  .lb-table-header,.lb-table-row{grid-template-columns:28px 1fr 70px}
+  .lb-tr-games,.lb-tr-change,.lb-table-header>div:nth-child(4),.lb-table-header>div:nth-child(5){display:none}
+  /* Certificate */
+  .cert-meta-row{grid-template-columns:1fr 1fr}
+  .cert-footer{flex-direction:column;gap:12px}
+  .cert-sigs{flex-wrap:wrap;gap:8px}
+  .cert-actions{flex-wrap:wrap;gap:6px}
+  .cert-share-row{flex-wrap:wrap}
+  .cert-share-btn{flex:none;width:calc(50% - 4px)}
+  /* Rewards */
+  .rw-badges-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rw-level-card{flex-wrap:wrap;gap:10px}
+  /* Game screen */
+  .ghud{padding:10px 14px}
+  .gtimer-ring{width:46px;height:46px}
+  .gtimer-num{font-size:18px}
+  .ghud-score-val{font-size:18px}
+  .gscenario{padding:10px 14px 16px}
+  .gback{padding:6px 14px}
+  .gresult{padding:20px 16px}
+  .gresult-btns{flex-direction:column}
+}
+
+/* ── SMALL PHONES (<480px) ───────────────────────────────────────────────── */
+@media(max-width:479px){
+  .row3{grid-template-columns:1fr}
+  .lb-top3{grid-template-columns:1fr}
+  .rw-badges-grid{grid-template-columns:1fr 1fr}
+  .cert-name{font-size:20px}
+  .cert-share-btn{width:100%}
+  .gresult-score{font-size:36px}
+  .gresult-title{font-size:18px}
+  .ftitle{font-size:16px}
+  .gchoice-name{font-size:12px}
+  .gchoice-price{font-size:13px}
+}
