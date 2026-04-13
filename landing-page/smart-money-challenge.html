@@ -482,9 +482,56 @@ footer{background:#1B2B5E;padding:40px 24px;border-top:1px solid rgba(255,255,25
 .btn-ghost{width:100%;padding:14px;background:rgba(255,255,255,.1);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;border-radius:12px;border:1.5px solid rgba(255,255,255,.2);cursor:pointer;transition:background .2s,border-color .2s;display:flex;align-items:center;justify-content:center;gap:8px}
 .btn-ghost:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5)}
 
+/* FEATURES — 2-col layout with phone mockup */
+.features-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-bottom:64px}
+.feat-hl{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0 32px}
+.feat-hl li{display:flex;align-items:flex-start;gap:12px}
+.feat-hl-icon{width:36px;height:36px;background:#F0F4F8;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.feat-hl-icon svg{width:16px;height:16px;color:#1B2B5E;stroke:currentColor}
+.feat-hl-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:#1B2B5E;display:block;margin-bottom:2px}
+.feat-hl-desc{font-size:13px;color:#64748B;line-height:1.5}
+
+/* Phone mockup */
+.smc-device-wrap{display:flex;justify-content:center;align-items:center}
+.smc-phone-shell{
+  width:265px;background:#0d0d1a;border-radius:44px;padding:11px;
+  box-shadow:0 0 0 2px #2a2a3a,0 32px 90px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.04);
+  position:relative;
+}
+.smc-phone-shell::before{
+  content:'';position:absolute;top:17px;left:50%;transform:translateX(-50%);
+  width:52px;height:5px;background:#1a1a2e;border-radius:3px;z-index:10;
+}
+.smc-phone-screen{background:#F0F4F8;border-radius:32px;overflow:hidden;height:540px}
+.smc-bar{background:#1B2B5E;padding:24px 14px 11px;display:flex;justify-content:space-between;align-items:center}
+.smc-user{display:flex;align-items:center;gap:8px}
+.smc-avi{width:30px;height:30px;background:rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px}
+.smc-name{font-size:12px;font-weight:800;color:#fff;font-family:'Nunito',sans-serif;line-height:1.2}
+.smc-grade{font-size:9px;color:rgba(255,255,255,.5)}
+.smc-pts{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.12);padding:4px 9px;border-radius:999px;color:#F5A623;font-size:11px;font-weight:800;font-family:'Nunito',sans-serif}
+.smc-body{padding:10px}
+.smc-card{background:#fff;border-radius:14px;padding:10px;margin-bottom:7px;box-shadow:0 1px 4px rgba(27,43,94,.06)}
+.smc-lvl-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.smc-lvl-name{font-size:10px;font-weight:800;color:#1B2B5E;font-family:'Nunito',sans-serif}
+.smc-lvl-pct{font-size:9px;color:#94A3B8}
+.smc-bar-track{height:5px;background:#F0F4F8;border-radius:3px;overflow:hidden}
+.smc-bar-fill{height:100%;background:#F5A623;width:68%;border-radius:3px}
+.smc-sh{font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#94A3B8;margin:9px 0 5px}
+.smc-game{background:#fff;border-radius:14px;padding:9px;margin-bottom:5px;display:flex;align-items:center;gap:9px;box-shadow:0 1px 3px rgba(27,43,94,.05)}
+.smc-game-ico{width:34px;height:34px;background:#F0F4F8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.smc-game-title{font-size:10px;font-weight:800;color:#1B2B5E;font-family:'Nunito',sans-serif;margin-bottom:1px}
+.smc-game-sub{font-size:8px;color:#94A3B8}
+.smc-game-pts{margin-left:auto;font-size:10px;font-weight:800;color:#F5A623;white-space:nowrap;font-family:'Nunito',sans-serif}
+.smc-row3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:7px}
+.smc-s{background:#fff;border-radius:10px;padding:7px;text-align:center;box-shadow:0 1px 3px rgba(27,43,94,.05)}
+.smc-s-num{font-size:13px;font-weight:900;color:#1B2B5E;font-family:'Nunito',sans-serif;line-height:1}
+.smc-s-lbl{font-size:8px;color:#94A3B8;margin-top:2px}
+
 @media(max-width:1023px){
   .about-inner,.register-grid{grid-template-columns:1fr;gap:36px}
   .features-grid{grid-template-columns:repeat(2,1fr)}
+  .features-layout{grid-template-columns:1fr;gap:48px}
+  .smc-device-wrap{order:0}
 }
 @media(max-width:639px){
   .features-grid{grid-template-columns:1fr}
@@ -673,9 +720,100 @@ footer{background:#1B2B5E;padding:40px 24px;border-top:1px solid rgba(255,255,25
 <!-- PLATFORM FEATURES -->
 <section class="features">
   <div class="features-inner">
-    <p class="section-tag">Powered by Improve ME Institute</p>
-    <h2 class="features-h2">A first-of-its-kind financial literacy platform for UAE students</h2>
-    <p class="features-sub">Built in partnership with Zoud and the Central Bank of the UAE, our gamified platform turns financial education into a personalised adventure — meeting every student in their own world.</p>
+
+    <!-- Two-column: text + phone mockup -->
+    <div class="features-layout">
+      <div>
+        <p class="section-tag">Powered by Improve ME Institute</p>
+        <h2 class="features-h2">A first-of-its-kind financial literacy platform for UAE students</h2>
+        <p class="features-sub">Built in partnership with Zoud and the Central Bank of the UAE, our gamified platform turns financial education into a personalised adventure.</p>
+        <ul class="feat-hl">
+          <li>
+            <div class="feat-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2 11 13"/><path d="M22 2h-6"/><path d="M22 2v6"/></svg></div>
+            <div><span class="feat-hl-title">Personalised learning paths</span><span class="feat-hl-desc">AI matches scenarios to student interests — football, gaming, music, and more.</span></div>
+          </li>
+          <li>
+            <div class="feat-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59 27.72 27.72 0 0 0 0 7.82A4 4 0 0 0 6.68 20h10.64a4 4 0 0 0 3.978-3.59 27.72 27.72 0 0 0 0-7.82A4 4 0 0 0 17.32 5z"/></svg></div>
+            <div><span class="feat-hl-title">3 interactive games</span><span class="feat-hl-desc">Budget Blitz, Savings Quest, and Smart Spender — real-world skills through play.</span></div>
+          </li>
+          <li>
+            <div class="feat-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+            <div><span class="feat-hl-title">Live national leaderboard</span><span class="feat-hl-desc">School, emirate, and national tiers — healthy competition amplifies motivation.</span></div>
+          </li>
+          <li>
+            <div class="feat-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <div><span class="feat-hl-title">Official certificates</span><span class="feat-hl-desc">Branded Zoud × Central Bank UAE certificates, signed and downloadable.</span></div>
+          </li>
+          <li>
+            <div class="feat-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><span class="feat-hl-title">Arabic + English</span><span class="feat-hl-desc">Fully bilingual — RTL Arabic and LTR English, switchable at any time.</span></div>
+          </li>
+        </ul>
+        <a href="/" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">
+          See the student demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </a>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="smc-device-wrap">
+        <div class="smc-phone-shell">
+          <div class="smc-phone-screen">
+            <div class="smc-bar">
+              <div class="smc-user">
+                <div class="smc-avi">😊</div>
+                <div>
+                  <div class="smc-name">Sara Al Mansouri</div>
+                  <div class="smc-grade">GEMS Wellington · Grade 8</div>
+                </div>
+              </div>
+              <div class="smc-pts">⭐ 1,240</div>
+            </div>
+            <div class="smc-body">
+              <div class="smc-card">
+                <div class="smc-lvl-row">
+                  <div class="smc-lvl-name">⚡ Money Navigator — Lv. 5</div>
+                  <div class="smc-lvl-pct">68%</div>
+                </div>
+                <div class="smc-bar-track"><div class="smc-bar-fill"></div></div>
+              </div>
+              <div class="smc-sh">🔥 Play Today</div>
+              <div class="smc-game">
+                <div class="smc-game-ico">💰</div>
+                <div>
+                  <div class="smc-game-title">Budget Blitz</div>
+                  <div class="smc-game-sub">Manage your gaming setup budget</div>
+                </div>
+                <div class="smc-game-pts">+80 pts</div>
+              </div>
+              <div class="smc-game">
+                <div class="smc-game-ico">🏦</div>
+                <div>
+                  <div class="smc-game-title">Savings Quest</div>
+                  <div class="smc-game-sub">Save for your first football kit</div>
+                </div>
+                <div class="smc-game-pts">+60 pts</div>
+              </div>
+              <div class="smc-game">
+                <div class="smc-game-ico">🛒</div>
+                <div>
+                  <div class="smc-game-title">Smart Spender</div>
+                  <div class="smc-game-sub">Needs vs wants challenge</div>
+                </div>
+                <div class="smc-game-pts">+50 pts</div>
+              </div>
+              <div class="smc-row3">
+                <div class="smc-s"><div class="smc-s-num">🔥3</div><div class="smc-s-lbl">Streak</div></div>
+                <div class="smc-s"><div class="smc-s-num">#847</div><div class="smc-s-lbl">National</div></div>
+                <div class="smc-s"><div class="smc-s-num">12</div><div class="smc-s-lbl">Games</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature cards grid -->
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">
@@ -741,10 +879,6 @@ footer{background:#1B2B5E;padding:40px 24px;border-top:1px solid rgba(255,255,25
         <p class="feature-desc">Every student's points contribute to their school's team total.</p>
       </div>
     </div>
-    <a href="/" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">
-      See the student demo
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-    </a>
   </div>
 </section>
 
