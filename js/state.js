@@ -141,6 +141,11 @@ function initIcons() {
   si('csi2', 'message-circle', 13, '#0F6E56');
   si('csi3', 'mail', 13, '#854F0B');
 
+  // New gamification features
+  initMysteryBox();
+  initRivalryBanner();
+  initVaultBar();
+
   // Game screen — back button
   const gBackBtn = document.getElementById('gbackBtn');
   if (gBackBtn) {
