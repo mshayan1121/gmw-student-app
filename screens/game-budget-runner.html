@@ -1,0 +1,23 @@
+<div class="game-screen" id="screen-game-budget-runner">
+  <div class="gback" id="br-back-btn" onclick="exitBudgetRunner()"></div>
+  <div id="br-wrap" style="flex:1;min-height:0;position:relative;overflow:hidden;display:flex;flex-direction:column">
+    <!-- Phaser canvas target -->
+    <div id="br-container" style="position:absolute;inset:0;z-index:0"></div>
+    <!-- HTML HUD overlay on top of Phaser canvas -->
+    <div id="br-hud" style="
+      position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:10px 16px 20px;
+      background:linear-gradient(to bottom,rgba(0,0,0,.40) 0%,transparent 100%)">
+      <div id="br-lives" style="display:flex;gap:5px;align-items:center"></div>
+      <div style="text-align:center;color:#fff;line-height:1.1">
+        <div style="font-size:9px;font-weight:800;opacity:.75;letter-spacing:.07em;text-transform:uppercase;font-family:Nunito,sans-serif">AED Saved</div>
+        <div id="br-aed" style="font-size:20px;font-weight:900;font-family:Nunito,sans-serif;color:#FFB800;text-shadow:0 1px 4px rgba(0,0,0,.4)">0</div>
+      </div>
+      <div style="text-align:right;color:#fff;line-height:1.1">
+        <div style="font-size:9px;font-weight:800;opacity:.75;letter-spacing:.07em;text-transform:uppercase;font-family:Nunito,sans-serif">Score</div>
+        <div id="br-score-hud" style="font-size:20px;font-weight:900;font-family:Nunito,sans-serif;text-shadow:0 1px 4px rgba(0,0,0,.4)">0</div>
+      </div>
+    </div>
+  </div>
+</div>

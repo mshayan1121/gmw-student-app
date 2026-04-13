@@ -91,6 +91,7 @@ function initIcons() {
   si('gti1', 'wallet', 22, '#6C63FF');
   si('gti2', 'piggy-bank', 22, '#0F6E56');
   si('gti3', 'brain', 22, '#854F0B');
+  si('gti4', 'coins', 22, '#6C63FF');
   si('gfpbi', 'play', 13, '#412402');
   stxt('gfm1', 'clock', 'rgba(255,255,255,.65)', '15 sec per round');
   stxt('gfm2', 'zap', 'rgba(255,255,255,.65)', '5 rounds');
@@ -146,7 +147,7 @@ function initIcons() {
   initRivalryBanner();
   initVaultBar();
 
-  // Game screen — back button
+  // Game screen — back button (Budget Blitz)
   const gBackBtn = document.getElementById('gbackBtn');
   if (gBackBtn) {
     const backIc = document.createElement('i');
@@ -156,4 +157,29 @@ function initIcons() {
     gBackBtn.appendChild(document.createTextNode('Back to games'));
     lucide.createIcons({ nodes: [backIc] });
   }
+
+  // Money Machine — back button
+  const mmBackBtn = document.getElementById('mm-back-btn');
+  if (mmBackBtn) {
+    const backIc2 = document.createElement('i');
+    backIc2.setAttribute('data-lucide', 'arrow-left');
+    backIc2.style.cssText = 'width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:5px';
+    mmBackBtn.appendChild(backIc2);
+    mmBackBtn.appendChild(document.createTextNode('Back to games'));
+    lucide.createIcons({ nodes: [backIc2] });
+  }
+
+  // Budget Runner — back button
+  const brBackBtn = document.getElementById('br-back-btn');
+  if (brBackBtn) {
+    const backIc3 = document.createElement('i');
+    backIc3.setAttribute('data-lucide', 'arrow-left');
+    backIc3.style.cssText = 'width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:5px';
+    brBackBtn.appendChild(backIc3);
+    brBackBtn.appendChild(document.createTextNode('Back to games'));
+    lucide.createIcons({ nodes: [backIc3] });
+  }
+
+  // Games screen — Budget Runner tile icon
+  si('gti5', 'footprints', 22, '#6C63FF');
 }
