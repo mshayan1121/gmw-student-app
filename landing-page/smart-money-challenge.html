@@ -58,6 +58,7 @@ nav.topnav{
   transition:background .2s;display:flex;align-items:center;min-height:48px;
 }
 .nav-register:hover{background:#E09415}
+.reg-short{display:none}
 
 /* HERO */
 .hero{
@@ -361,6 +362,7 @@ footer{background:#1B2B5E;padding:40px 24px;border-top:1px solid rgba(255,255,25
   .nav-brand-badge{padding:4px 8px}
   .nav-divider{height:1.25rem}
   .nav-register{padding:8px 14px;font-size:.8rem;border-radius:10px}
+  .reg-full{display:none}.reg-short{display:inline}
   .hero-inner{padding:0 1rem}
   .hero-h1 .line1,.hero-h1 .line2,.hero-h1 .line3{font-size:clamp(36px,12vw,56px)}
   .hero-left{padding:48px 0 24px}
@@ -509,7 +511,7 @@ footer{background:#1B2B5E;padding:40px 24px;border-top:1px solid rgba(255,255,25
     </a>
     <div class="nav-actions">
       <a href="/" class="nav-demo">Explore the demo</a>
-      <a href="#register" class="nav-register">Register School</a>
+      <a href="#register" class="nav-register"><span class="reg-full">Register School</span><span class="reg-short">Register</span></a>
     </div>
   </div>
 </nav>
